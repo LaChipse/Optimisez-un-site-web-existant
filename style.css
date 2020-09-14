@@ -45,11 +45,11 @@ a:hover {
 }
 
 .bloc-lg {
-    padding: 100px 50px;
+    padding: 50px;
 }
 
 .bloc-md {
-    padding: 50px;
+    padding: 30px;
 }
 
 .bloc-sm {
@@ -93,6 +93,8 @@ a:hover {
 .texture-paper::before {
     background: url("img/texture-paper.png");
     background-size: 280px 280px;
+    position: absolute;
+    z-index: 0;
 }
 
 .b-parallax {
@@ -269,7 +271,7 @@ a:hover {
 }
 
 .voffset-lg {
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .row-no-gutters {
@@ -378,6 +380,24 @@ a:hover {
         left: 0;
         right: 0;
     }
+
+    .text-presentation {
+        text-align: center;
+        font-size: 23px;
+        padding: 20px;
+    }
+
+    .text-citation p {
+        text-align: center;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    .text-citation .source {
+        font-size: 13px;
+        font-style: normal;
+    }
+
     .nav-center {
         text-align: center;
     }
@@ -536,7 +556,8 @@ a[data-lightbox] {
     text-align: center;
 }
 
-a[data-lightbox]:hover::before {
+a[data-lightbox]:hover::before,
+a[data-lightbox]:focus::before{
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
     font-size: 32px;
@@ -554,7 +575,8 @@ a[data-lightbox]:hover::before {
     -webkit-transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover img,
+a[data-lightbox]:focus img {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
@@ -704,16 +726,18 @@ p {
     margin: auto auto auto auto;
 }
 
-h2 {
+h3 {
     font-size: 22px;
     line-height: 1.4em;
 }
 
-h3 {
+h2 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
+    position: relative;
+    z-index: 1;
 }
 
 .med-width-whitespace {
@@ -759,7 +783,11 @@ h4 {
 
 .bold-link {
     font-weight: 900;
-    text-decoration: underline!important;
+}
+
+.bold-link:hover,
+.bold-link:focus {
+    text-decoration: underline;
 }
 
 .bgc-white {
@@ -775,6 +803,10 @@ h4 {
 }
 
 .tc-white {
+    color: #FFFFFF!important;
+}
+
+.tc-orange {
     color: #F3976C!important;
 }
 
@@ -794,6 +826,20 @@ h4 {
 
 .ltc-white:hover {
     color: #cccccc!important;
+}
+
+.bold-under {
+    font-weight: bold;
+}
+
+.bold-under:hover,
+.bold-under:focus {
+    text-decoration: underline;
+}
+
+.bold:hover,
+.bold:focus {
+    font-weight: bold;
 }
 
 .ltc-atomic-tangerine {
