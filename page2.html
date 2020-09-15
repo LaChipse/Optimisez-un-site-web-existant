@@ -34,10 +34,10 @@
 <!-- Header - bloc-0 -->
 <header class="bloc bgc-white l-bloc " id="bloc-0">
 	<div class="container bloc-sm">
-		
+
 		<div  role="main navigation"><nav class="navbar row">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="atlanta web design logo" height="40" /></a>
+				<div role="banner" class="navbar-brand"><img src="img/la-chouette-agence.png" alt="paris web design logo agence web meilleure agence" height="40" /></div>
 				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
@@ -48,7 +48,7 @@
 						<a class="bold" href="index.html">Accueil</a>
 					</li>
 					<li>
-						<a class="bold" href="https://www.google.fr/">Réalisations</a>
+						<a class="bold" href="#">Réalisations</a>
 					</li>
 					<li>
 						<a class="bold" href="page2.html">Contact</a>
@@ -82,30 +82,31 @@
 <aside class="bloc bgc-white l-bloc" id="bloc-7">
 	<div class="container bloc-lg">
 		<div class="row">
-			<div class="col-sm-6" role="form">
-				<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+			<div class="col-sm-6">
+				<form id="form_1" novalidate success-msg="Votre message a été envoyé." fail-msg="Oups! Il semble que notre serveur ne répond pas. Désolé pour le dérangement !" aria-label="Ajoutez un commentaire">
 					<div class="form-group">
-						<label>
+						<label for="name">
 							Nom
 						</label>
 						<input id="name" class="form-control" required/>
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="email"> 
 							Adresse email
 						</label>
 						<input id="email" class="form-control" type="email" required/>
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="know">
 							Comment nous avez-vous connu ?
 						</label>
-						<input class="form-control" type="email" required id="input_504"/>
+						<input id="know" class="form-control" type="email" required id="input_504"/>
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="message">
 							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-						</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+						</label>
+						<textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
 					</div> 
 					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
 						Envoyer
@@ -113,9 +114,14 @@
 				</form>
 			</div>
 			<div class="col-sm-6">
-				<p>
-					contact@lachouetteagence.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
-				</p>
+				<div itemscope itemtype="https://schema.org/LocalBusiness">
+					<p><span itemprop="email">contact@lachouetteagence.com</span></p>
+					<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+				  		<p><span itemprop="streetAddress">2 place Sathonay</span>,
+						  <span itemprop="addressLocality">69001 Lyon</span>,</p>
+						  <p>Ouvert de <span itemprop="openingHours" content="Mo-Fr 09:00-18:00">9h à 18h, du lundi au vendredi</span></p>
+					</div>
+			  	</div>
 			</div>
 		</div>
 	</div>
@@ -138,22 +144,22 @@
 				<div class="row row-no-gutters social" role="footer navigation">
 					<div class="col-sm-3">
 						<div class="text-center" aria-label="Twitter">
-							<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+							<a class="social" href="#"><span class="fa fa-twitter icon-md"></span></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center" aria-label="Facebook">
-							<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+							<a class="social" href="#"><span class="fa fa-facebook icon-md"></span></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center" aria-label="Dribble">
-							<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
+							<a class="social" href="#"><span class="fa fa-dribbble icon-md"></span></a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center" aria-label="Instagram">
-							<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+							<a class="social" href="#"><span class="fa fa-instagram icon-md"></span></a>
 						</div>
 					</div>
 				</div>
@@ -166,6 +172,5 @@
 </div>
 <!-- Principal conteneur END -->
     
-
 </body>
 </html>
